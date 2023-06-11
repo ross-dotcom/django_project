@@ -1,2 +1,15 @@
-<h1>Home (E-Commerce)</h1>
+<a href="{% url 'home' %}">Home</a>
 <a href="{% url 'product_list' %}">Product List</a>
+<a href="{% url 'category_list' %}">Category List</a>
+
+{% block p_list %}
+{% endblock %}
+
+{% block p_details %}
+{% endblock %}
+
+{% block c_list %}
+{% endblock %}
+
+{% block c_detail %}
+{% endblock %}

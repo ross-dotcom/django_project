@@ -1,1 +1,14 @@
-<h1>Category Detail</h1>
+{% extends "home.html" %}
+
+{% block c_detail %}
+  <h1>Category Detail: {{ category.name }}</h1>
+  <ul>
+    {% for product in products %}
+      <li>
+        {{ product.name }}
+      </li>
+    {% empty %}
+      <li>No products found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

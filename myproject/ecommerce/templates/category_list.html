@@ -1,1 +1,16 @@
-<h1>Category List</h1>
+{% extends "home.html" %}
+
+{% block c_list %}
+  <h1>Category List</h1>
+  <ul>
+    {% for category in categories %}
+      <li>
+        <a href="{% url 'category_detail' category_id=category.id %}">
+          {{ category.name }}
+        </a>
+      </li>
+    {% empty %}
+      <li>No products found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
