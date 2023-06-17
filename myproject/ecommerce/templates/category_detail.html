@@ -4,8 +4,10 @@
   <h2>Category Detail: {{ category.name }}</h2>
   <ul>
     {% for product in products %}
-      <ul>
-        {{ product.name }}
+      <ul style="font-size: 18px;">
+        <a href="{% url 'product_detail' product_id=product.id %}">
+          {{ product.name }}
+        </a>
       </ul>
     {% empty %}
       <ul>No products found.</ul>

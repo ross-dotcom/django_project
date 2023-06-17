@@ -19,6 +19,5 @@ def category_list(request):
 
 def category_detail(request, category_id):
   category = Category.objects.get(pk=category_id)
-  # products = category.product_set.all()
-  products = category.products.all()
+  products = category.product_set.all()
   return render(request, 'category_detail.html', {'category': category, 'products': products})
